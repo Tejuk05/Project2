@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian Recipe Directory</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        body {
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            height: 40px;
+        }
+
+        .nav-buttons button {
+            padding: 0.5rem 1rem;
+            margin-left: 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .nav-buttons .submit {
+            background-color: #d62828;
+            color: white;
+        }
+
+        .nav-buttons .signin {
+            border: 1px solid #ccc;
+            background: white;
+        }
+
+        .search-section {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .search-bar {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .category-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .category-buttons button {
+            background: #eee;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        h2 {
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 0 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .card-content h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .card-content p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer .columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        footer .column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        footer h4 {
+            margin-bottom: 1rem;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        footer ul li a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        footer ul li a:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://ai-public.creatie.ai/gen_page/logo_placeholder.png" alt="Logo">
+        <div class="nav-buttons">
+            <button class="submit">Submit Recipe</button>
+            <button class="signin">Sign In</button>
+        </div>
+    </header>
+
+    <section class="search-section">
+        <div class="search-bar">
+            <input type="text" placeholder="Search recipes, ingredients, or cuisines...">
+        </div>
+        <div class="category-buttons">
+            <button>All</button>
+            <button>Vegetarian</button>
+            <button>Non-Vegetarian</button>
+            <button>Snacks</button>
+            <button>Sweets</button>
+        </div>
+    </section>
+
+    <h2>Latest Recipes</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://creatie.ai/ai/api/search-image?query=Close-up%20shot%20of%20perfectly%20cooked%20Chicken%20Biryani..."
+                alt="Chicken Biryani">
+            <div class="card-content">
+                <h3>Chicken Biryani</h3>
+                <p>Aromatic rice dish with chicken</p>
+                <small>60 mins | Main Course</small>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://creatie.ai/ai/api/search-image?query=Freshly%20made%20Palak%20Paneer..."
+                alt="Palak Paneer">
+            <div class="card-content">
+                <h3>Palak Paneer</h3>
+                <p>Creamy spinach with paneer</p>
+                <small>45 mins | Vegetarian</small>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://creatie.ai/ai/api/search-image?query=Homemade%20Masala%20Dosa..." alt="Masala Dosa">
+            <div class="card-content">
+                <h3>Masala Dosa</h3>
+                <p>Spiced potato filling in dosa</p>
+                <small>30 mins | Vegetarian</small>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

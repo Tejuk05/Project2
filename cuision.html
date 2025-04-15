@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .logo h1 {
+            margin-left: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .search-box input {
+            padding: 0.5rem;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        nav {
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 1rem 2rem;
+        }
+
+        nav a {
+            margin-right: 1.5rem;
+            color: #666;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:first-child {
+            color: #000;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .cards {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #fff;
+            width: 380px;
+            /* Increased width */
+            height: 300px;
+            max-width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 400px;
+            height: 250px;
+            /* Use fixed height instead of % */
+            object-fit: cover;
+        }
+
+
+        .card-content h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .card-content p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .card-content span {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        .spotlight {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .spotlight img {
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        .spotlight-info {
+            width: 50%;
+        }
+
+        .spotlight-info h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .spotlight-info p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .spotlight-info ul {
+            list-style: disc;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter input {
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            width: 200px;
+        }
+
+        .newsletter button {
+            padding: 0.5rem 1rem;
+            border: none;
+            background: #000;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+
+        @media (max-width: 768px) {
+
+            .cards,
+            .spotlight {
+                flex-direction: column;
+            }
+
+            .spotlight img,
+            .spotlight-info {
+                width: 100%;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+        }
+
+        nav a.active,
+        nav a:hover {
+            color: #FF5733;
+            border-bottom: 2px solid #FF5733;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="title">Desi</div>
+
+            </div>
+
+            <div class="links">
+                <a href="index.html" class="active">Home</a>
+                <a href="handicrafts.html">Handicrafts</a>
+                <a href="culture.html">Culture & Heritage</a>
+                <a href="pure.html">Pure & Natural</a>
+                <a href="dishes.html">Regional Cuisine</a>
+                <a href="community.html">Community</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2 class="section-title">Popular Recipes</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://via.placeholder.com/350x200?text=Italian+Cuisine" alt="South Indian">
+                <div class="card-content">
+                    <h3>South Indian</h3>
+                    <p>Recipes of South India</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/350x200?text=Mexican+Cuisine" alt="North Indian">
+                <div class="card-content">
+                    <h3>North Indian</h3>
+                    <p>Recipes of North India.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/350x200?text=Indian+Cuisine" alt="East Indian">
+                <div class="card-content">
+                    <h3>East Indian</h3>
+                    <p>Recipes of East India.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/350x200?text=Indian+Cuisine" alt="West Indian">
+                <div class="card-content">
+                    <h3>West Indian</h3>
+                    <p>Recipes of West India.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/350x200?text=Indian+Cuisine" alt="Northeast Indian">
+                <div class="card-content">
+                    <h3>Northeast Indian</h3>
+                    <p>Recipes of Northeast Indian.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/350x200?text=Indian+Cuisine" alt="Other Regional">
+                <div class="card-content">
+                    <h3>Other Regional</h3>
+                    <p>Recipes of Other Regional.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="spotlight">
+            <img src="https://via.placeholder.com/600x400?text=Thai+Green+Curry" alt="South Indian Cuisine">
+            <div class="spotlight-info">
+                <h3>The Art of South Indian Cooking</h3>
+                <p>South Indian Cooking is renowned for its delicate balance of sweet, sour, salty, and spicy flavors.
+                </p>
+                <h4>Key Ingredients</h4>
+                <ul>
+                    <li>Lemongrass</li>
+                    <li>Thai Basil</li>
+                    <li>Coconut Milk</li>
+                </ul>
+                <h4>Cooking Methods</h4>
+                <ul>
+                    <li>Stir-frying</li>
+                    <li>Curry Making</li>
+                </ul>
+            </div>
+        </div>-->
+    </main>
+</body>
+
+</html>
